@@ -3,19 +3,6 @@ public class Expression  {
     private static Main.Action action;
 
 
-//    public Expression(String sparam) {
-//        if (oldParam==null)
-//        this.oldParam = oldParam;
-//        this.newParam = newParam;
-//    }
-
-//    @Override
-//    public int rezult() {
-//        if (oldParam !=null) { //Если
-//            return 1;
-//        }
-//    return 0;
-//    }
 
     public static int calc(int ival, Main.Action operation){
         if (iRez==null){

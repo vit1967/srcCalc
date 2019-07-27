@@ -20,10 +20,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Integer leftVal;
         System.out.println("Введи выр. вида 121 +43- 64 +765*5 / 2 или римск. вида VII+IIL - XVI с любым кол-вом оп.");
-//        Pattern patOp=Pattern.compile("[\\s]{0,3}[*/+-][\\s]{0,3}");
-//        Pattern patOp=Pattern.compile("\\s*[*/+-]\\s*");
-//        Pattern patOp=Pattern.compile("([\\s]){1,3}");
-//        Scanner sc=new Scanner(System.in).useDelimiter(patOp);
 //        String input = "878979+287372 -787 + 7564 / IVXL * 576 + LXII =";
 
         Scanner sc=new Scanner(System.in);
