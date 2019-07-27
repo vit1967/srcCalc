@@ -18,7 +18,7 @@ public class Main {
     public static Action action=null;
 
     public static void main(String[] args) throws IOException {
-        Integer leftVal;
+
         System.out.println("Введи выр. вида 121 +43- 64 +765*5 / 2 или римск. вида VII+IIL - XVI с любым кол-вом оп.");
 //        String input = "878979+287372 -787 + 7564 / IVXL * 576 + LXII =";
 
@@ -30,7 +30,6 @@ public class Main {
                 Matcher matcher=pattern.matcher(inputs);
 //                System.out.println(matcher.groupCount()+"inputs="+inputs); //dbg
                 Expression exp=new Expression();
-                leftVal=null;
                 tipRA=RomArab.NoElse;
                 while (matcher.find()) {
 //                System.out.print(matcher.start()+"="+matcher.group()+"знак:");
@@ -70,9 +69,6 @@ public class Main {
             System.out.println("Что-то пошло не так:"+e.getMessage());
         }
         sc.close();
-
-        //--
-
 
     }
 }
