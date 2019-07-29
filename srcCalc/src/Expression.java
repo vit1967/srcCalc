@@ -1,10 +1,10 @@
 public class Expression  {
-    private static Integer iRez;
-    private static Main.Action action;
+    private  Integer iRez;
+    private  Main.Action action;
 
 
 
-    public static int calc(int ival, Main.Action operation){
+    public  int calc(int ival, Main.Action operation){
         if (iRez==null){
             iRez=ival;
         } else {    //если уже было , делаем ранее запомненное действие, а потом запоминаем новое действие
@@ -27,7 +27,7 @@ public class Expression  {
         return iRez;
     }
 
-    public static Integer getiRez() {
+    public  Integer getiRez() {
         return iRez;
     }
 }

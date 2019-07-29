@@ -59,10 +59,10 @@ public class Main {
                         action = StringParser.toAction(sz);
                     } else action=Action.Eqv;
                     System.out.print(tipRA.name()+"="); System.out.print(ival);System.out.println(","+action.name()); //dbg
-                    Expression.calc(ival,action);
+                    exp.calc(ival,action);
 
                 }
-                System.out.println("Результат="+Expression.getiRez());
+                System.out.println("Результат="+exp.getiRez());
 
             }
         } catch (Exception | NoValidateTipExeption e) {
