@@ -6,7 +6,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
-    static boolean onlyFrom0to10=true;  //нстройка ограничения вводимых цифр только от 0 до 10(по усл. задачи)
+    static boolean onlyFrom0to10=true;  //нстройка ограничения вводимых цифр числа только от 0 до 10(по усл. задачи)
+    static boolean only2digit=false;  //нстройка ограничения кол-ва вводимых чисел только 2-мя (по усл. задачи)
 
     enum RomArab { Arab(1),Rom(2),NoElse(0),Err(-1); //флаг сост. и типа вычислений: арабскими/ римскими /ни то ни се(ошибка)
     private int val;
@@ -28,6 +29,7 @@ public class Main {
         try {
             Pattern pattern=Pattern.compile("(?:([0-9]+)|([IVXLDMC]+))(\\s*[*/+-]\\s*)?+");
             while (sc.hasNext()) {
+                int cntDig=0;
                 String inputs=sc.nextLine();
                 Matcher matcher=pattern.matcher(inputs);
 //                System.out.println(matcher.groupCount()+"inputs="+inputs); //dbg
@@ -43,8 +45,10 @@ public class Main {
                             throw new NoValidateTipExeption("НЕ РИМСКАЯ ЦИФРА:"+si);
                         }
                         tipRA=RomArab.Arab;
+                        cntDig++;
                         ival=StringParser.toInt(si);
                         if (onlyFrom0to10 && (ival< 0 || ival>10)) throw new NoValidateTipExeption("Только от 0 до 10ти или присвойте onlyFrom0to10=false , а ввели:"+si);
+                        if (only2digit && (cntDig>2)) throw new NoValidateTipExeption("Только 2 числа или присвойте only2digit=false , а ввели:"+cntDig);
 
                     }
                     if (matcher.start(2)>=0) { //обнаружена гр. римских цифр
@@ -56,6 +60,8 @@ public class Main {
                         tipRA=RomArab.Rom;
                         ival=StringParser.toInt(si);
                         if (onlyFrom0to10 && (ival< 0 || ival>10)) throw new NoValidateTipExeption("Только от 0 до 10ти, или присвойте onlyFrom0to10=false, а ввели:"+si);
+                        if (only2digit && (cntDig>2)) throw new NoValidateTipExeption("Только 2 числа или присвойте only2digit=false , а ввели:"+cntDig);
+
                     }
                     if (matcher.start(3)>=0) {
                         String sz = matcher.group(3).trim();  //знак
