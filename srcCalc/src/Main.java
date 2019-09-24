@@ -22,7 +22,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         System.out.println("Введи выр. вида 121 +43- 64 +765*5 / 2 или римск. вида VII+IIL - XVI с любым кол-вом оп.");
-//        String input = "878979+287372 -787 + 7564 / IVXL * 576 + LXII =";
+//        String input = "878979+287372 -787 + 7564 / IVXL * 576 + LXII ";
 
         Scanner sc=new Scanner(System.in);
         try {
