@@ -6,6 +6,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
+    static boolean onlyFrom0to10=true;  //нстройка ограничения вводимых цифр только от 0 до 10(по усл. задачи)
+
     enum RomArab { Arab(1),Rom(2),NoElse(0),Err(-1); //флаг сост. и типа вычислений: арабскими/ римскими /ни то ни се(ошибка)
     private int val;
         RomArab(int v) { this.val=v;       }
@@ -42,6 +44,7 @@ public class Main {
                         }
                         tipRA=RomArab.Arab;
                         ival=StringParser.toInt(si);
+                        if (onlyFrom0to10 && (ival< 0 || ival>10)) throw new NoValidateTipExeption("Только от 0 до 10ти или присвойте onlyFrom0to10=false , а ввели:"+si);
 
                     }
                     if (matcher.start(2)>=0) { //обнаружена гр. римских цифр
@@ -52,6 +55,7 @@ public class Main {
                         }
                         tipRA=RomArab.Rom;
                         ival=StringParser.toInt(si);
+                        if (onlyFrom0to10 && (ival< 0 || ival>10)) throw new NoValidateTipExeption("Только от 0 до 10ти, или присвойте onlyFrom0to10=false, а ввели:"+si);
                     }
                     if (matcher.start(3)>=0) {
                         String sz = matcher.group(3).trim();  //знак
