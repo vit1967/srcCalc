@@ -6,7 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
-    static boolean onlyFrom0to10=true;  //нстройка ограничения вводимых цифр числа только от 0 до 10(по усл. задачи)
+    static boolean onlyFrom0to10=true;  //нстройка ограничения вводимого числа только от 0 до 10(по усл. задачи)
     static boolean only2digit=false;  //нстройка ограничения кол-ва вводимых чисел только 2-мя (по усл. задачи)
 
     enum RomArab { Arab(1),Rom(2),NoElse(0),Err(-1); //флаг сост. и типа вычислений: арабскими/ римскими /ни то ни се(ошибка)
