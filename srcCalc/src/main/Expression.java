@@ -1,3 +1,5 @@
+package main;
+
 public class Expression  {
     private  Integer iRez;
     private  Main.Action action;
@@ -22,12 +24,14 @@ public class Expression  {
                     iRez=(Integer) iRez/ival;
             }
 
+
         }
         action=operation;
+
         return iRez;
     }
 
-    public  Integer getiRez() {
-        return iRez;
+    public  String getiRez() throws NoValidateTipExeption {
+        return StringParser.rezToString(iRez);
     }
 }

@@ -1,13 +1,13 @@
+package main;
+
 import java.io.IOException;
 import java.util.Scanner;
-import java.util.StringTokenizer;
-import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Main {
+public class Main  {
     static boolean onlyFrom0to10=true;  //нстройка ограничения вводимого числа только от 0 до 10(по усл. задачи)
-    static boolean only2digit=false;  //нстройка ограничения кол-ва вводимых чисел только 2-мя (по усл. задачи)
+    static boolean only2digit=true;  //нстройка ограничения кол-ва вводимых чисел только 2-мя (по усл. задачи)
 
     enum RomArab { Arab(1),Rom(2),NoElse(0),Err(-1); //флаг сост. и типа вычислений: арабскими/ римскими /ни то ни се(ошибка)
     private int val;
@@ -46,7 +46,7 @@ public class Main {
                         }
                         tipRA=RomArab.Arab;
                         cntDig++;
-                        ival=StringParser.toInt(si);
+                        ival=StringParser.inputToInt(si);
                         if (onlyFrom0to10 && (ival< 0 || ival>10)) throw new NoValidateTipExeption("Только от 0 до 10ти или присвойте onlyFrom0to10=false , а ввели:"+si);
                         if (only2digit && (cntDig>2)) throw new NoValidateTipExeption("Только 2 числа или присвойте only2digit=false , а ввели:"+cntDig);
 
@@ -58,7 +58,7 @@ public class Main {
                             throw new NoValidateTipExeption("НЕ АРАБСКАЯ ЦИФРА:"+si);
                         }
                         tipRA=RomArab.Rom;
-                        ival=StringParser.toInt(si);
+                        ival=StringParser.inputToInt(si);
                         if (onlyFrom0to10 && (ival< 0 || ival>10)) throw new NoValidateTipExeption("Только от 0 до 10ти, или присвойте onlyFrom0to10=false, а ввели:"+si);
                         if (only2digit && (cntDig>2)) throw new NoValidateTipExeption("Только 2 числа или присвойте only2digit=false , а ввели:"+cntDig);
 
@@ -69,6 +69,7 @@ public class Main {
                         action = StringParser.toAction(sz);
                     } else action=Action.Eqv;
                     System.out.print(tipRA.name()+"="); System.out.print(ival);System.out.println(","+action.name()); //dbg
+
                     exp.calc(ival,action);
 
                 }

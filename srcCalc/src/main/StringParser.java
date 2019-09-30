@@ -1,3 +1,5 @@
+package main;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -32,12 +34,17 @@ public class StringParser {
         s=si;
     }
 
-    public static int toInt(String si) throws NoValidateTipExeption{
+    public static int inputToInt(String si) throws NoValidateTipExeption{
         if (Main.tipRA== Main.RomArab.Arab) {
             return Integer.parseInt(si);
         } else if (Main.tipRA== Main.RomArab.Rom){
             return romanToArabic(si);
         } else throw new  NoValidateTipExeption("НЕ УСТАНОВЛЕН ТИП ЧИСЛА:"+si);
+    }
+    public static String rezToString(Integer rezult) throws NoValidateTipExeption{
+        if (Main.tipRA== Main.RomArab.Rom)  { //если с римскими, то преобр. рез-та в римскую ц.
+            return arabicToRoman(rezult);
+        } else return rezult.toString();
     }
 
     public static Main.Action toAction(String si){
@@ -81,8 +88,27 @@ public class StringParser {
         return result;
     }
 
-//    public static class NoRomanExeption extends Throwable {
-//        public NoRomanExeption(String input) {
-//        }
-//    }
+    private static String arabicToRoman(int number) {
+        if ((number <= 0) || (number > 4000)) {
+            throw new IllegalArgumentException(number + "число для перевода в римск не в треб. диапазоне (0,4000]");
+        }
+
+        List<RomanNumeral> romanNumerals = RomanNumeral.getReverseSortedValues();
+
+        int i = 0;
+        StringBuilder sb = new StringBuilder();
+
+        while ((number > 0) && (i < romanNumerals.size())) {
+            RomanNumeral currentSymbol = romanNumerals.get(i);
+            if (currentSymbol.getValue() <= number) {
+                sb.append(currentSymbol.name());
+                number -= currentSymbol.getValue();
+            } else {
+                i++;
+            }
+        }
+
+        return sb.toString();
+    }
+
 }
