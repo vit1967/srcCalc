@@ -47,7 +47,7 @@ public class StringParser {
         } else return rezult.toString();
     }
 
-    public static Main.Action toAction(String si){
+    public static Main.Action toAction(String si) throws NoValidateTipExeption{
         switch (si){
             case "+":
                 return Main.Action.Plus;
@@ -58,8 +58,9 @@ public class StringParser {
             case "*":
                 return Main.Action.Mult;
              default:
+                 throw new  NoValidateTipExeption("НЕ УСТАНОВЛЕН ЗНАК ОПЕРАЦИИ:"+si);
         }
-        return Main.Action.Err;
+//        return Main.Action.Err;
     }
 
 

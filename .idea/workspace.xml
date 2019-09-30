@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a263aa1-6f8a-40b4-a5fa-5da7c60a495d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/srcCalc/src/test/main/StringParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcCalc/src/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/srcCalc/src/main/Expression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcCalc/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/srcCalc/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcCalc/src/NoValidateTipExeption.java" beforeDir="false" afterPath="$PROJECT_DIR$/srcCalc/src/main/NoValidateTipExeption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcCalc/src/StringParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/srcCalc/src/main/StringParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcCalc/srcCalc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/srcCalc/srcCalc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcCalc/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/srcCalc/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcCalc/src/main/StringParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/srcCalc/src/main/StringParser.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569337324462</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="0">
+      <created>1569834718546</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569834718546</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
