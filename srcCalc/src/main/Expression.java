@@ -6,7 +6,7 @@ public class Expression  {
 
 
 
-    public  int calc(int ival, Main.Action operation){
+    public  int calc(int ival, Main.Action operation) throws NoValidateTipExeption {
         if (iRez==null){
             iRez=ival;
         } else {    //если уже было , делаем ранее запомненное действие, а потом запоминаем новое действие
@@ -22,6 +22,10 @@ public class Expression  {
                     break;
                 case Div:
                     iRez=(Integer) iRez/ival;
+                case none:
+                    throw new NoValidateTipExeption("НЕТ ОПЕРАЦИИ:");
+                default:
+                    throw new NoValidateTipExeption("НЕТ ОПЕРАЦИИ и воще хрень какая-то:");
             }
 
 

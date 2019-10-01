@@ -20,10 +20,9 @@ public class Main  {
     }
     public static Action action=Action.none;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException,NoValidateTipExeption {
 
         System.out.println("Введи выр. вида 1+9 или 121 +43- 64 +765*5 / 2 или римск. вида VII+IIL - XVI .");
-//        String input = "878979+287372 -787 + 7564 / IVXL * 576 + LXII ";
 
         Scanner sc=new Scanner(System.in);
         try {
@@ -69,7 +68,7 @@ public class Main  {
                         action = StringParser.toAction(sz);
                     }
 
-                    if(cntDig>1) { //больше 2х цифр (еще нет знаков оперраций)
+                    if(cntDig>1) { //больше 1й цифры (еще нет знаков оперраций)
                         if (only2digit && cntDig>2 ) throw new NoValidateTipExeption("Только 2 числа или присвойте only2digit=false , а ввели:"+cntDig);
                         if(action==Action.none) throw new NoValidateTipExeption("НЕ БЫЛО ЗНАКА ОПЕРАЦИИ:");
                         else if(only2digit) {action = Action.Eqv;} //если любой знак уже был
