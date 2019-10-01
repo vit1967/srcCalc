@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a263aa1-6f8a-40b4-a5fa-5da7c60a495d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/srcCalc/src/test/main/ExpressionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/srcCalc/src/test/main/InputOutputMainTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/srcCalc/src/test/main/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcCalc/src/main/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/srcCalc/src/main/Expression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcCalc/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/srcCalc/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcCalc/src/test/main/StringParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/srcCalc/src/test/main/StringParserTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,20 +89,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.StringParserTest.rezToString">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="srcCalc" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ExpressionTest.calc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="srcCalc" />
-      <option name="PACKAGE_NAME" value="main" />
-      <option name="MAIN_CLASS_NAME" value="main.ExpressionTest" />
-      <option name="METHOD_NAME" value="calc" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -121,21 +107,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.testWrongInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StringParserTest.inputToInt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="srcCalc" />
       <option name="PACKAGE_NAME" value="main" />
-      <option name="MAIN_CLASS_NAME" value="main.MainTest" />
-      <option name="METHOD_NAME" value="testWrongInput" />
+      <option name="MAIN_CLASS_NAME" value="main.StringParserTest" />
+      <option name="METHOD_NAME" value="inputToInt" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringParserTest.arabicToRoman" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StringParserTest.inputToIntFromRom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="srcCalc" />
       <option name="PACKAGE_NAME" value="main" />
       <option name="MAIN_CLASS_NAME" value="main.StringParserTest" />
-      <option name="METHOD_NAME" value="arabicToRoman" />
+      <option name="METHOD_NAME" value="inputToIntFromRom" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringParserTest.rezToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="srcCalc" />
+      <option name="PACKAGE_NAME" value="main" />
+      <option name="MAIN_CLASS_NAME" value="main.StringParserTest" />
+      <option name="METHOD_NAME" value="rezToString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -143,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StringParserTest.rezToString" />
+        <item itemvalue="JUnit.StringParserTest.inputToIntFromRom" />
+        <item itemvalue="JUnit.StringParserTest.inputToInt" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.InputOutputMainTests.shouldTakeUserInput" />
-        <item itemvalue="JUnit.MainTest.testWrongInput" />
-        <item itemvalue="JUnit.ExpressionTest.calc" />
-        <item itemvalue="JUnit.StringParserTest.arabicToRoman" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569878733222</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="0">
+      <created>1569964208001</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1569964208002</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
